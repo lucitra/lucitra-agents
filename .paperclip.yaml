@@ -1,0 +1,39 @@
+schema: paperclip/v1
+agents:
+  eng-lead:
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+  devops:
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+  release-manager:
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+        NPM_TOKEN:
+          kind: secret
+          requirement: optional
+routines:
+  weekly-retro:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 1"
+        timezone: America/Los_Angeles
+  triage-deps:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 3"
+        timezone: America/Los_Angeles
+  security-scan:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 10 1 * *"
+        timezone: America/Los_Angeles
