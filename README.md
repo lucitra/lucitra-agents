@@ -30,7 +30,7 @@ DevOps runs in parallel:
 | Release Manager | Release Manager | Eng Lead | npm-publish, ship, babysit-pr, resolve-review |
 | DevOps | DevOps Engineer | Eng Lead | validate, security-audit, triage-dependabot, cloud-build |
 
-## Skills (18)
+## Skills (19)
 
 All skills are bundled in `skills/` and can be imported individually or as part of the company.
 
@@ -52,6 +52,7 @@ All skills are bundled in `skills/` and can be imported individually or as part 
 
 | Skill | Description |
 |-------|-------------|
+| `apple-signing` | Apple code signing and release for Tauri desktop apps |
 | `cloud-build` | GCP Cloud Build monitoring |
 | `deploy` | Lucitra service deployment |
 | `implement` | Pick up Linear story end-to-end |
